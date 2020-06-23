@@ -1,13 +1,12 @@
 # How to Install Volatility on Linux
-(https://www.volatilityfoundation.org)[Volatility] is a powerful tool used for analyzing memory dumps on Linux, Mac, and Windows systems. On Linux and Mac systems, one has to build profiles separately, and notably, they must match the memory system profile (building a Ubuntu 18.04.3 profile to analyze a Ubuntu 18.04.4 system will not work). This article will go over all the dependencies that need to be downloaded as well as how to build a profile.
+[Volatility](https://www.volatilityfoundation.org) is a powerful tool used for analyzing memory dumps on Linux, Mac, and Windows systems. On Linux and Mac systems, one has to build profiles separately, and notably, they must match the memory system profile (building a Ubuntu 18.04.3 profile to analyze a Ubuntu 18.04.4 system will not work). This article will go over all the dependencies that need to be downloaded as well as how to build a profile.
 
 # Dependencies
 Note that information is taken from [Volatility's Github](https://github.com/volatilityfoundation/volatility/wiki/Installation). Many Volatility plugins will not work with the following packages.
 
 ## Prerequisites for Dependencies
 Run the following:
-<pre><code>
-$ sudo apt-get install git subversion pcregrep libpcre++-dev python-dev -y
+<pre><code>$ sudo apt-get install git subversion pcregrep libpcre++-dev python-dev -y
 $ sudo apt-get install build-essential -y
 $ sudo apt-get install dwarfdump -y
 </code></pre>
