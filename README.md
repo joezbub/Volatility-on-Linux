@@ -13,47 +13,40 @@ $ sudo apt-get install dwarfdump -y
 
 ## Install Distorm
 Do not use `pip install distorm3`. It will not build correctly. Instead, download the source tar from [here](https://github.com/gdabah/distorm/releases). After unzipping it, cd into the distorm3/ and run:
-<pre><code>
-$ python setup.py build
+<pre><code>$ python setup.py build
 $ sudo python setup.py build install
 </code></pre>
 
 ## Install Yara
 Do not use `pip install distorm3`. I made this mistake, and Volatility was not able to detect Yara. Make sure to go to the [main website](https://github.com/VirusTotal/yara/releases), and download the source tar. Run:
-<pre><code>
-$ tar -zxf yara-4.0.1.tar.gz
+<pre><code>$ tar -zxf yara-4.0.1.tar.gz
 $ cd yara-4.0.1
 $ ./bootstrap.sh
 </code></pre>
 
 Install some dependencies:
-<pre><code>
-$ sudo apt-get install automake libtool make gcc pkg-config</code></pre>
+<pre><code>$ sudo apt-get install automake libtool make gcc pkg-config</code></pre>
 
 Continue:
-<pre><code>
-$ ./configure
+<pre><code>$ ./configure
 $ make
 $ sudo make install
 </code></pre>
 
 Check to see if it installed properly:
-<pre><code>
-$ make check
+<pre><code>$ make check
 </code></pre>
 
 ## Install PyCrypto
 Download the latest source from [here](https://www.dlitz.net/software/pycrypto/)
-<pre><code>
-$ tar -zxvf pycrypto-2.6.1.tar.gz
+<pre><code>$ tar -zxvf pycrypto-2.6.1.tar.gz
 $ python setup.py build
 $ sudo python setup.py build install
 </code></pre>
 
 ## Install Volatility
 Finally, clone from Volatility's Github repo and install:
-<pre><code>
-$ git clone https://github.com/volatilityfoundation/volatility.git
+<pre><code>$ git clone https://github.com/volatilityfoundation/volatility.git
 $ cd volatility
 $ python setup.py
 </code></pre>
