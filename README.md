@@ -50,3 +50,22 @@ Finally, clone from Volatility's Github repo and install:
 $ cd volatility
 $ python setup.py
 </code></pre>
+
+Create module.dwarf:
+<pre><code>
+$ cd volatility/tools/linux
+$ make
+</code></pre>
+
+Make a zip containing module.dwarf and the exact profile of your Linux distro:
+<pre><code>
+cd ../../../
+$ zip $(lsb_release -i -s)_$(uname -r)_profile.zip ./volatility/tools/linux/module.dwarf /boot/System.map-$(uname -r)
+</code></pre>
+
+Copy the zip file into the Volatility plugin path:
+<pre><code>
+$ cp *name*.zip /volatility/volatility/plugins/overlays/linux
+</code></pre>
+
+# Generating a Memory Sample with LiME 
