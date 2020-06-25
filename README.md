@@ -52,20 +52,42 @@ $ python setup.py
 </code></pre>
 
 Create module.dwarf:
-<pre><code>
-$ cd volatility/tools/linux
+<pre><code>$ cd volatility/tools/linux
 $ make
 </code></pre>
 
 Make a zip containing module.dwarf and the exact profile of your Linux distro:
-<pre><code>
-cd ../../../
+<pre><code>$ cd ../../../
 $ zip $(lsb_release -i -s)_$(uname -r)_profile.zip ./volatility/tools/linux/module.dwarf /boot/System.map-$(uname -r)
 </code></pre>
 
 Copy the zip file into the Volatility plugin path:
-<pre><code>
-$ cp *name*.zip /volatility/volatility/plugins/overlays/linux
+<pre><code>$ cp *name*.zip /volatility/volatility/plugins/overlays/linux
 </code></pre>
 
-# Generating a Memory Sample with LiME 
+# Generating a Memory Sample with LiME
+LiME is a memory acquisition tool made specifically for Linux devices.
+
+## Dependencies
+<pre><code>$ sudo apt install linux-headers-4.9.0-8-amd64
+$ sudo apt install build-essential
+</code></pre>
+
+## Download and Compile
+Install the latest version:
+<pre><code>$ git clone https://github.com/504ensicsLabs/LiME
+</code></pre>  
+
+Compile:
+<pre><code>$ cd LiME/src/
+$ make
+</code></pre>
+A file named `lime-5.3.0-59-generic.ko` is created.
+
+## Generating Memory
+Use insmod to load the compiled LKM. Also, `format=lime` and `timeout=0` are imp
+ortant for analysis via Volatility.
+<pre><code>$ sudo insmod lime-4.9.0-8-amd64.ko "path=/media/external/dump.mem format=lime timeout=0"
+</code></pre>
+
+ 
