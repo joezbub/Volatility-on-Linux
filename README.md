@@ -58,11 +58,11 @@ $ make
 
 Make a zip containing module.dwarf and the exact profile of your Linux distro:
 <pre><code>$ cd ../../../
-$ zip $(lsb_release -i -s)_$(uname -r)_profile.zip ./volatility/tools/linux/module.dwarf /boot/System.map-$(uname -r)
+$ zip $(lsb_release -i -s)_$(uname -r)_profile.zip *PATH*/volatility/tools/linux/module.dwarf /boot/System.map-$(uname -r)
 </code></pre>
 
 Copy the zip file into the Volatility plugin path:
-<pre><code>$ cp *name*.zip /volatility/volatility/plugins/overlays/linux
+<pre><code>$ cp *name*.zip *PATH TO HERE*/volatility/volatility/plugins/overlays/linux
 </code></pre>
 
 # Generating a Memory Sample with LiME
@@ -82,7 +82,7 @@ Compile:
 <pre><code>$ cd LiME/src/
 $ make
 </code></pre>
-A file named `lime-5.3.0-59-generic.ko` is created.
+A file named `lime-5.3.0-62-generic.ko` is created.
 
 ## Generating Memory
 Use insmod to load the compiled LKM. Also, `format=lime` and `timeout=0` are imp
