@@ -87,7 +87,7 @@ A file named `lime-5.3.0-59-generic.ko` is created.
 ## Generating Memory
 Use insmod to load the compiled LKM. Also, `format=lime` and `timeout=0` are imp
 ortant for analysis via Volatility.
-<pre><code>$ sudo insmod lime-4.9.0-8-amd64.ko "path=/media/external/dump.mem format=lime timeout=0"
+<pre><code>$ sudo insmod lime-5.3.0-62-generic.ko "path=/home/dump1.mem format=lime timeout=0"
 </code></pre>
 
  
