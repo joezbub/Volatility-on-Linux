@@ -48,7 +48,7 @@ $ sudo python setup.py build install
 Finally, clone from Volatility's Github repo and install:
 <pre><code>$ git clone https://github.com/volatilityfoundation/volatility.git
 $ cd volatility
-$ python setup.py
+$ sudo python setup.py build install
 </code></pre>
 
 Create module.dwarf:
