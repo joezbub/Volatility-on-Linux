@@ -58,7 +58,7 @@ $ make
 
 Make a zip containing module.dwarf and the exact profile of your Linux distro:
 <pre><code>$ cd ../../../
-$ zip $(lsb_release -i -s)_$(uname -r)_profile.zip *PATH*/volatility/tools/linux/module.dwarf /boot/System.map-$(uname -r)
+$ sudo zip $(lsb_release -i -s)_$(uname -r)_profile.zip *PATH*/volatility/tools/linux/module.dwarf /boot/System.map-$(uname -r)
 </code></pre>
 
 Copy the zip file into the Volatility plugin path:
