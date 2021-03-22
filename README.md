@@ -58,11 +58,16 @@ $ make
 
 Make a zip containing module.dwarf and the exact profile of your Linux distro:
 <pre><code>$ cd ../../../
-$ sudo zip $(lsb_release -i -s)_$(uname -r)_profile.zip *PATH*/volatility/tools/linux/module.dwarf /boot/System.map-$(uname -r)
+$ sudo zip $(lsb_release -i -s)_$(uname -r)_profile.zip ./volatility/tools/linux/module.dwarf /boot/System.map-$(uname -r)
 </code></pre>
 
 Copy the zip file into the Volatility plugin path:
-<pre><code>$ cp *name*.zip *PATH TO HERE*/volatility/volatility/plugins/overlays/linux
+<pre><code>$ cp *name*.zip ./volatility/volatility/plugins/overlays/linux
+</code></pre>
+
+Test if configuration is complete:
+<pre><code>$ cd volatility
+$ python vol.py -h
 </code></pre>
 
 # Generating a Memory Sample with LiME
