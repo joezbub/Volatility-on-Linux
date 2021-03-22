@@ -65,9 +65,9 @@ Copy the zip file into the Volatility plugin path:
 <pre><code>$ cp *name*.zip ./volatility/volatility/plugins/overlays/linux
 </code></pre>
 
-Test if configuration is complete:
+Test if installation is complete and profile is configured:
 <pre><code>$ cd volatility
-$ python vol.py -h
+$ python vol.py --info | grep $(lsb_release -i -s)
 </code></pre>
 
 # Generating a Memory Sample with LiME
