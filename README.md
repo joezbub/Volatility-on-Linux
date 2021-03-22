@@ -18,7 +18,7 @@ $ sudo python setup.py build install
 </code></pre>
 
 ## Install Yara
-Do not use `pip install distorm3`. I made this mistake, and Volatility was not able to detect Yara. Make sure to go to the [main website](https://github.com/VirusTotal/yara/releases), and download the source tar. Run:
+Do not use `pip install yara-python`. I made this mistake, and Volatility was not able to detect Yara. Make sure to go to the [main website](https://github.com/VirusTotal/yara/releases), and download the source tar. Run:
 <pre><code>$ tar -zxf yara-4.0.1.tar.gz
 $ cd yara-4.0.1
 $ ./bootstrap.sh
