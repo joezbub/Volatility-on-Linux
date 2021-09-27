@@ -6,13 +6,11 @@ Note that information is taken from [Volatility's Github](https://github.com/vol
 
 ## Prerequisites for Dependencies
 Run the following:
-<pre><code>$ sudo apt-get install git subversion pcregrep libpcre++-dev python-dev -y
-$ sudo apt-get install build-essential -y
-$ sudo apt-get install dwarfdump -y
+<pre><code>$ sudo apt-get install build-essential autoconf dwarfdump git subversion pcregrep libpcre++-dev python-dev -y
 </code></pre>
 
 ## Install Distorm
-Do not use `pip install distorm3`. It will not build correctly. Instead, download the source tar from [here](https://github.com/gdabah/distorm/releases). After unzipping it, cd into the distorm3/ and run:
+Do not use `pip install distorm3`. It will not build correctly. Instead, download the source tar from [here](https://github.com/gdabah/distorm/releases). After unzipping it, cd into the the directory and run:
 <pre><code>$ python setup.py build
 $ sudo python setup.py build install
 </code></pre>
