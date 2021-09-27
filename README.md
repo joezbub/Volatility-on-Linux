@@ -12,7 +12,7 @@ Run the following:
 ## Install Distorm
 Do not use `pip install distorm3`. It will not build correctly. Instead, download the source tar from [here](https://github.com/gdabah/distorm/releases). After unzipping it, cd into the the directory and run:
 <pre><code>$ python setup.py build
-$ sudo python setup.py build install
+$ python setup.py build install
 </code></pre>
 
 ## Install Yara
@@ -36,9 +36,8 @@ Check to see if it installed properly:
 </code></pre>
 
 ## Install PyCrypto
-Download the latest source from [here](https://www.dlitz.net/software/pycrypto/)
-<pre><code>$ tar -zxvf pycrypto-2.6.1.tar.gz
-$ python setup.py build
+Download the latest source from [here](https://www.dlitz.net/software/pycrypto/) and cd into the directory.
+<pre><code>$ python setup.py build
 $ sudo python setup.py build install
 </code></pre>
 
@@ -50,7 +49,7 @@ $ sudo python setup.py build install
 </code></pre>
 
 Create module.dwarf:
-<pre><code>$ cd volatility/tools/linux
+<pre><code>$ cd /tools/linux
 $ make
 </code></pre>
 
